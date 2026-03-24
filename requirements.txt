@@ -10,3 +10,4 @@ reportlab
 sqlalchemy
 openpyxl
 pdfplumber
+mysql-connector-python
