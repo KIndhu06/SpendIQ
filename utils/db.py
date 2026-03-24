@@ -1,12 +1,13 @@
 import pymysql
+import streamlit as st
 
 def get_connection():
     connection = pymysql.connect(
-        host="mysql-48c3837-kindhunagamani-fce3.h.aivencloud.com",
-        user="avnadmin",
-        password="AVNS_hlTqrVhPxEdd4Xi4tiN",
-        database="defaultdb",
-        port=23940,
+        host=st.secrets["mysql"]["host"],
+        user=st.secrets["mysql"]["user"],
+        password=st.secrets["mysql"]["password"],
+        database=st.secrets["mysql"]["database"],
+        port=st.secrets["mysql"]["port"],
         ssl_verify_cert=False,
         ssl_verify_identity=False
     )
