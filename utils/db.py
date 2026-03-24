@@ -9,7 +9,6 @@ def get_connection():
             password=st.secrets["mysql"]["password"],
             database=st.secrets["mysql"]["database"],
             port=int(st.secrets["mysql"]["port"]),
-            ssl_disabled=False,
             connection_timeout=10
         )
         return connection
